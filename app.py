@@ -128,7 +128,7 @@ def buildprompt(task,context,job_description):
 
         '''
 
-    elif task == "Sugeestions":
+    elif task == "Suggestions":
         prompt= f'''
 
         - You are expert recuirter who analyze the resume very precisely.
