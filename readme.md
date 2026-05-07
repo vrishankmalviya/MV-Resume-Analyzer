@@ -48,7 +48,7 @@ This application allows users to upload a resume PDF and compare it against a jo
 
 # 🏗️ Project Architecture
 
-```text
+
 Resume PDF + Job Description
               ↓
          PDF Loading
@@ -93,7 +93,7 @@ AI_JOB_RAG/
 
 ```bash
 git clone <your_repo_link>
-cd AI_JOB_RAG
+cd MV_Resume_Analyzer
 ```
 
 ---
