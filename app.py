@@ -4,7 +4,7 @@
 
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from dotenv import load_dotenv
 load_dotenv()
@@ -255,16 +255,14 @@ def analyze_resume(resume_file,job_description,task,custom_query):
 
         #Chunk
         splitter= RecursiveCharacterTextSplitter(
-                chunk_size=500,
+                chunk_size=700,
                 chunk_overlap=100
             )
 
         chunks=splitter.split_documents(docs)
         
         #embedding
-        embedding=HuggingFaceEmbeddings(
-                model_name="sentence-transformers/all-MiniLM-L6-v2"
-            )
+        embedding=OpenAIEmbeddings()
         
         #vector database
         vectorstore= FAISS.from_documents(chunks,embedding)
@@ -277,7 +275,7 @@ def analyze_resume(resume_file,job_description,task,custom_query):
             query = f"Perform {task} analysis"
 
         #Retrieval
-        results=vectorstore.similarity_search(query,k=11)
+        results=vectorstore.similarity_search(query,k=3)
 
 
         context = " ".join([r.page_content for r in results])
@@ -325,7 +323,11 @@ def analyze_resume(resume_file,job_description,task,custom_query):
         client = OpenAI()
         response = client.chat.completions.create(
                 model="gpt-4o-mini",
+
                 temperature=0,
+
+                max_tokens=500,
+
                 messages=[
                     {"role": "user", "content": prompt}
                 ]
