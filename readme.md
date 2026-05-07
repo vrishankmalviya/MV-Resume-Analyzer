@@ -1,7 +1,7 @@
 ````markdown
 # 🤖 MV Resume Analyzer using RAG & LLM
 
-An AI-powered Resume Analyzer built using Retrieval-Augmented Generation (RAG), LangChain, FAISS, OpenAI GPT,OpenAI GPT and Gradio.
+An AI-powered Resume Analyzer built using Retrieval-Augmented Generation (RAG), LangChain, FAISS, OpenAI GPT, OpenAI Embedding and Gradio.
 
 This application allows users to upload a resume PDF and compare it against a job description to receive intelligent recruiter-style analysis including:
 
