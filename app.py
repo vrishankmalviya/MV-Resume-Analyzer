@@ -164,6 +164,7 @@ def buildprompt(task,context,job_description):
 
         - Do not include the candidate details and job description in output response.
         - No extra sections
+        -Only give suggestions no match score, no full analysis, no missing skills, no matching skills
 
         '''
 

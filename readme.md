@@ -1,7 +1,7 @@
 ````markdown
 # 🤖 MV Resume Analyzer using RAG & LLM
 
-An AI-powered Resume Analyzer built using Retrieval-Augmented Generation (RAG), LangChain, FAISS, OpenAI GPT, and Gradio.
+An AI-powered Resume Analyzer built using Retrieval-Augmented Generation (RAG), LangChain, FAISS, OpenAI GPT,OpenAI GPT and Gradio.
 
 This application allows users to upload a resume PDF and compare it against a job description to receive intelligent recruiter-style analysis including:
 
@@ -15,7 +15,7 @@ This application allows users to upload a resume PDF and compare it against a jo
 
 # 🚀 Live Demo
 
-> Add your deployed Render / Hugging Face link here
+https://mv-resume-analyzer-1.onrender.com/
 
 ---
 
@@ -154,7 +154,7 @@ The resume is loaded and split into smaller chunks using LangChain text splitter
 
 ### 3. Embedding Generation
 
-Chunks are converted into vector embeddings using HuggingFace embedding models.
+Chunks are converted into vector embeddings using OpenAi embedding model.
 
 ### 4. Vector Database
 
@@ -231,7 +231,7 @@ This project can be deployed on:
 
 # 📸 Screenshots
 
-> Add screenshots of your UI here after deployment
+![alt text](<Screenshot 2026-05-07 152559.png>)
 
 ---
 
