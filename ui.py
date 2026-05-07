@@ -5,7 +5,7 @@ from app import analyze_resume
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
-    gr.Markdown("## MV Resume Analyzer")
+    gr.Markdown("## 🤖 MV Resume Analyzer")
 
     with gr.Row():
         with gr.Column():
