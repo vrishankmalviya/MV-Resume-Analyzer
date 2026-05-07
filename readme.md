@@ -239,5 +239,3 @@ This project can be deployed on:
 
 This project is built for educational and portfolio purposes.
 
-```
-```
